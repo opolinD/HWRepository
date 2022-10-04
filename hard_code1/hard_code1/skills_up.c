@@ -54,7 +54,7 @@ int main() {
 					break;
 				}
 				else {
-					exit();
+					return(0);
 				}
 			}
 			break;
@@ -83,7 +83,7 @@ int main() {
 					break;
 				}
 				else {
-					exit();
+					return(0);
 				}
 			}
 			break;
@@ -111,13 +111,13 @@ int main() {
 					break;
 				}
 				else {
-					exit();
+					return(0);
 				}
 			}
 
 			break;
 		case 0:
-			exit();
+			return(0);
 		default: break;
 		}
 	}
