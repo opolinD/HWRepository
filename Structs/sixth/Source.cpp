@@ -54,7 +54,7 @@ void calculateCupboardCost(struct Dimension sizes, float cupboardCost) {
 	int square = calculateSquare(sizes);
 	float cost_of_all_cupboard = square * cupboardCost;
 }
-//расчёта массы шкафа по известному весу м2.
+//расчёт массы шкафа по известному весу м2.
 float calculateWeigtCb(struct Dimension sizes, float cupboardWeight) {
 	int square = calculateSquare(sizes);
 	float weight = square * cupboardWeight;
@@ -76,7 +76,7 @@ float calculateCost(struct Dimension sizes, float consumption, float workCost, f
 	float cost_of_all_cupboard = square * cupboardCost;//соимость за площадь
 	float climb_cost = calculateClimbCb(sizes, climbCost, floors, cupboardWeight);//стоимость за доставку до нцжного этажа
 	float full_cost = delivery + all_cost + cost_of_all_cupboard + climb_cost;
-
+	std::cout << "Cost by position:\n - cupboard cost: " << cost_of_all_cupboard << "\n - painting cost: " << all_cost << "\n - delivery cost (with rise): " << climb_cost + delivery << "\nTotal cost: " << full_cost;
 	return full_cost;
 }
 int main() {
@@ -94,7 +94,5 @@ int main() {
 	input(&cupboard);
 	float cost;
 	cost = calculateCost(cupboard, paintConsumption, paintWorkCost, paintCost, cupboardCost, weight, riseCost, floorsCount, deliveryCost);
-
-	std::cout << "Total cost: " << cost;
 	return 0;
 }

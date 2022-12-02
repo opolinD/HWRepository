@@ -53,9 +53,3 @@ void inicialFIO(struct FIO* people) {
 	std::cout << "Input patronymic: ";
 	std::cin >> people->patronymic;
 }
-int main() {
-	struct FIO me;
-	inicialFIO(&me);
-	system("pause");
-	return 0;
-}
